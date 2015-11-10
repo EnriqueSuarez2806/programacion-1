@@ -1,0 +1,35 @@
+// examen.cpp : Defines the entry point for the console application.
+// Autor: Jose Enrque Suarez Parada
+// Fecha: 10 de Noviembre de 2015
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	int N, suma, par, sig ;
+
+	suma= 0 ;
+	sig= 1 ;
+	par= 2 ;
+
+	cout << "Ingrese un numero par hasta el que se quiere hacer la serie: " ;
+	cin >> N ;
+
+
+	while (par <= N)
+	{
+
+		suma= suma - (sig*par) ;
+
+		par= par+2 ;
+		sig= -sig ;
+		suma= suma ;
+	}
+
+	cout << "La suma de la serie es: " <<suma <<endl;
+	getch () ;
+}
